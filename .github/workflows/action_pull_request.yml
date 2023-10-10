@@ -10,6 +10,9 @@ jobs:
       - name: Fetch develop branch so screenshotbot can access it
         run: |
           git fetch origin develop
+      - name: check merge
+
+        run: git rev-parse HEAD &&  git merge-base 38181385c139952159a3cf69950f8ff658395efb `git rev-parse HEAD`
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
