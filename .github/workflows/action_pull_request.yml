@@ -8,7 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref }}
           fetch-depth: 0
       - name: Fetch develop branch so screenshotbot can access it
         run: |
