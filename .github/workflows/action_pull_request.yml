@@ -7,13 +7,15 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Fetch develop branch so screenshotbot can access it
         run: |
           git fetch origin develop
-      - name: show git graph
-        run: git show --format='%H %P' HEAD && git log --graph --all
-      - name: check merge
-        run: git rev-parse HEAD &&  git merge-base 38181385c139952159a3cf69950f8ff658395efb `git rev-parse HEAD`
+      # - name: show git graph
+      #   run: git show --format='%H %P' HEAD && git log --graph --all
+      # - name: check merge
+      #   run: git rev-parse HEAD &&  git merge-base 38181385c139952159a3cf69950f8ff658395efb `git rev-parse HEAD`
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
