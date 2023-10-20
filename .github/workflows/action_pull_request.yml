@@ -29,7 +29,7 @@ jobs:
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: PR=`[ "$GITHUB_ACTION_EVENT" = "pull_request" ] ; echo $?` fastlane combined_pull_request
+      - run: PR=`( [ "$GITHUB_ACTION_EVENT" = "pull_request" ] && echo true ) || echo false` fastlane combined_pull_request
       - name: Validate Swagger and OpenAPI using Swagger CLI
         uses: mbowman100/swagger-validator-action@2.0
         with:
