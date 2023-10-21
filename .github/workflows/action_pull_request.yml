@@ -35,6 +35,7 @@ jobs:
         with:
           files: webapi.yaml
     env:
+      SCREENSHOTBOT_CURRENT_BRANCH: develop
       GIT_REPOSITORY_URL: ${{ github.repositoryUrl }}
       SCREENSHOTBOT_API_KEY:  ${{ secrets.SCREENSHOTBOT_API_KEY }}
       SCREENSHOTBOT_API_SECRET: ${{ secrets.SCREENSHOTBOT_API_SECRET }}
