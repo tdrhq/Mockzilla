@@ -1,6 +1,6 @@
 # Mockzilla
 ![Deployment](https://github.com/Apadmi-Engineering/Mockzilla/actions/workflows/action_deploy_binaries.yml/badge.svg)
-
+...
 
 ## What is Mockzilla?
 
@@ -62,14 +62,10 @@ val myEndpoint = EndpointConfiguration.Builder("hello-world")
     }
 ```
 
-## Important Note 🛑 
+## Important Note 🛑
 
-Mockzilla is designed as a development and test tool **only**. 
+Mockzilla is designed as a development and test tool **only**.
 
-Mockzilla should **never be used in production**. Its traffic is unprotected and by nature of running a server on device, it can introduce security issues. 
+Mockzilla should **never be used in production**. Its traffic is unprotected and by nature of running a server on device, it can introduce security issues.
 
 **Do not ship it to production**.
-
-
-
-
